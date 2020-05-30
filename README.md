@@ -36,3 +36,9 @@ def alarm_email():
     server.quit()
     print('已发送邮件')
 ```
+
+完整的监控代码在https://github.com/metang326/Apple_Back-to-School_check/blob/master/check.py
+
+计划把这个脚本设置成系统的定时任务，每天定时执行几次。linux增加crontab定时任务的方法博客里有写：
+
+https://metang326.github.io/2020/02/03/[linux]linux%E5%A2%9E%E5%8A%A0crontab%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/
