@@ -1,12 +1,21 @@
 # Apple_Back-to-School_check
-Apple暑期返校送Beats耳机活动监控，发现活动开始后通过邮件的方式提醒
-
-最近考虑换电脑，一般来说7月的时候苹果会推出教育优惠买MacBook送Beats耳机的活动，为了第一时间发现活动，挑到颜色好看的耳机，写了一个小脚本定时监控教育商店的主页 https://www.apple.com.cn/cn-k12/shop 看看有没有更新了关键词“耳机”或者“Beats”
+Apple暑期返校送Beats耳机活动监控，发现活动开始后通过邮件的方式提醒。
 
 相比于之前写Nike定制监控的脚本 https://github.com/metang326/nike_by_you_check 这次尝试了一下python发送邮件提醒，居然非常简单，用的库也是自带的（我使用的是python3.7）
 
+## 使用流程
+1. git clone代码到本地
+2. 把代码中的邮箱与密码换成自己的
+3. 把执行脚本的语句添加到Linux的定时任务
+
+## 代码流程
+- 抓取教育商店的主页 https://www.apple.com.cn/cn-k12/shop 
+- 看看有没有更新了关键词“耳机”或者“Beats”
+- - 如果发现这个活动开始了，发邮件通知自己；
+- - 如果没有开始，则每天八点的时候邮件自己一次，通知“活动还没有开始”，确保监控是正常运行的
+
 ## code
-完整的监控代码在https://github.com/metang326/Apple_Back-to-School_check/blob/master/check.py
+https://github.com/metang326/Apple_Back-to-School_check/blob/master/check.py
 
 ## 如何给自己发送邮件
 步骤：申请一个新邮箱，在【设置】页面的POP3/SMTP/IMAP标签，给它开启IMAP/SMTP服务，邮箱系统会给一个密码，把它填入下面的password即可，其他的收件邮箱、发件邮箱等等换成自己的，正文和标题也可以自己随便定义。smtp_server是发件邮箱的地址，如果是163或者qq邮箱是不同的，在邮箱系统的页面上会标注的。
