@@ -63,7 +63,8 @@ https://metang326.github.io/2020/02/03/[linux]linux%E5%A2%9E%E5%8A%A0crontab%E5%
 然后重启服务
 
 > sudo /etc/init.d/cron restart
-[ ok ] Restarting cron (via systemctl): cron.service.
+
+> [ ok ] Restarting cron (via systemctl): cron.service.
 
 
 这样就是每小时的12分这个时刻，执行一下检测脚本，如果发现官网里出现了关键词就发送邮件进行通知；否则的话就直接结束。
