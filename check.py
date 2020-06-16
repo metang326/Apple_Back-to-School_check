@@ -37,7 +37,7 @@ def check():
             return 0
         text = res.text
 #        text += "Beats耳机"
-        if text.find("耳机") != -1 or text.find("Beats") != -1:
+        if text.find("耳机") != -1 or text.find("Beats") != -1 or text.find("AirPods") != -1:
             print("活动开始啦!")
             alarm_email(1)
         else:
